@@ -1,1 +1,36 @@
-/* PHASE 8: Thumbs */
+/* CSS for the Friends Grid */
+
+/* Container for the friends grid */
+.friends-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Style for individual friend items */
+.friends-list li {
+    flex-basis: calc(33.33% - 20px); /* 33.33% width with margins */
+    margin: 10px; /* Adjust margin as needed */
+    position: relative;
+}
+
+/* Style for friend thumbnails */
+.thumb {
+    position: relative;
+    display: block;
+}
+
+.thumb img {
+    width: 100%;
+    border: 2px solid #fff; /* Add a white border to the image */
+}
+
+/* Tooltip for friend names */
+.thumb::before {
+    content: attr(title);
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8); /* Tooltip background color */
+    color: #fff; /* Tooltip text color */
+   
